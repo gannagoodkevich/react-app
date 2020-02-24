@@ -1,8 +1,8 @@
 /* Import statements */
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
+import Edit from './Edit.js'
 
-/* Home component */
 const Home = () => (
     <div>
         <h2>Welcome</h2>
@@ -16,11 +16,6 @@ const Profile = () => (
 )
 
 /* Products component */
-const Edit = () => (
-    <div>
-        <h2>Edit</h2>
-    </div>
-)
 
 /* App component */
 
