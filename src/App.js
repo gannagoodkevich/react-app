@@ -1,23 +1,14 @@
 /* Import statements */
 import React, { Component } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
-import Edit from './Edit.js'
+import Create from './Create.js'
+import Show from './Show.js'
 
 const Home = () => (
     <div>
         <h2>Welcome</h2>
     </div>
 )
-
-const Profile = () => (
-    <div>
-        <h2>Profile</h2>
-    </div>
-)
-
-/* Products component */
-
-/* App component */
 
 class App extends Component {
     render() {
@@ -27,15 +18,15 @@ class App extends Component {
                 <nav className="navbar navbar-light">
                     <ul className="nav navbar-nav">
                         <li><Link to="/">Homes</Link></li>
-                        <li><Link to="/profile">Category</Link></li>
-                        <li><Link to="/edit">Edit</Link></li>
+                        <li><Link to="/profile">Show</Link></li>
+                        <li><Link to="/edit">Create</Link></li>
                     </ul>
                 </nav>
 
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/profile" component={Profile}/>
-                    <Route path="/edit" component={Edit}/>
+                    <Route path="/profile" component={Show}/>
+                    <Route path="/edit" component={Create}/>
                 </Switch>
 
             </div>
