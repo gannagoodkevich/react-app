@@ -77,7 +77,7 @@ class Create extends React.Component {
             console.log("updated");
         }
         else{
-            expenses.push(this.state.income);
+            expenses.push(this.state.expenses);
             console.log("created");
         }
 

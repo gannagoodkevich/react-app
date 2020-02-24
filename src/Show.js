@@ -9,12 +9,17 @@ class Show extends React.Component {
         this.expenses.forEach(function(item){
             summExpenses += parseFloat(item);
         });
-        this.summExpenses = summExpenses
+        this.summExpenses = summExpenses;
         let summIncomes  = Number(0);
         this.incomes.forEach(function(item){
             summIncomes += parseFloat(item);
         });
-        this.summIncomes = summIncomes
+        this.summIncomes = summIncomes;
+        let message = 'Everything is okey!';
+        if (this.summExpenses > this.summIncomes){
+            message = 'Your expenses are bigger, then your inputs!';
+        }
+        this.message = message
         this.listIcomes = this.incomes.map((number) =>
             <tr>
                 <td>
@@ -95,6 +100,7 @@ class Show extends React.Component {
     render() {
         return (
             <div>
+                {this.message}
                 <div className="row">
                     <div className="col-md-2"></div>
                     <div className="col-md-3">
